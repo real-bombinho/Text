@@ -6,5 +6,5 @@ You can do anything with the app, just mention me! But I don't take any responsi
 
 Pictures licensed under the Creative Commons Attribution 4.0 International license.
 
-Original Source: Wikimedia Commons
+Original Source: Wikimedia Commons; 
 Authors: FreePik, Dave Gandy, Derferman
