@@ -94,10 +94,6 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="TextStream.pas"/>
-        <DCCReference Include="Search.pas">
-            <Form>Form2</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -5,12 +5,15 @@ interface
 uses System.Classes, System.SysUtils;
 
 type
+  TDebugProcedure = procedure(const S: string) of object;
+
   TTextStream = class(TObject)
     private
       FHost: TStream;
       FOffset,FSize: Integer;
-      FBuffer: array[0..1023] of Char;
+      FBuffer: array[0..1023] of AnsiChar;
       FEOF: Boolean;
+      FDebug: TDebugProcedure;
       function FillBuffer: Boolean;
     protected
       property Host: TStream read FHost;
@@ -22,6 +25,7 @@ type
       property EOF: Boolean read FEOF;
       property HostStream: TStream read FHost;
       property Offset: Integer read FOffset write FOffset;
+      property debug: TDebugProcedure read FDebug write FDebug;
     end;
 
 implementation
@@ -52,7 +56,7 @@ end;
 function TTextStream.ReadLn(out Data: string): Boolean;
 var
   Len, Start: Integer;
-  EOLChar: Char;
+  EOLChar: AnsiChar;
   s: AnsiString;
 begin
   Data := ''; s := '';
@@ -63,14 +67,17 @@ begin
         Exit; // no more data to read from stream -> exit
     Result := True;
     Start := FOffset;
-    while (FOffset<FSize) and (not CharinSet(FBuffer[FOffset], [#13,#10])) do
+    while (FOffset < FSize) and (not CharinSet(FBuffer[FOffset], [#13,#10])) do
+    begin
       Inc(FOffset);
-    Len := FOffset-Start;
+    end;
+    Len := FOffset - Start;
     if Len > 0 then
     begin
       SetLength(s, Length(s) + Len);
       Move(FBuffer[Start], s[Succ(Length(s)-Len)], Len);
       Data := string(s);
+      //if assigned(FDebug) then FDebug(s);
     end else
       Data := '';
   until FOffset <> FSize; // EOL char found
