@@ -1,6 +1,6 @@
 # Text
-little text viewer, currently set up to show the first 1000 Lines
-If file is *.pdf then the PDF-text is shown with '...' as placeholder for streams.
+Little text viewer, currently set up to show the first 1000 Lines.
+If the file is *.pdf then the PDF-text is shown with '...' as placeholder for streams.
 
 # License
 You can do anything with the app, just mention me! But I don't take any responsibility for any damage the app causes. https://creativecommons.org/licenses/by/4.0/
