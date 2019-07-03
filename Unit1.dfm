@@ -2,24 +2,40 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Text'
-  ClientHeight = 767
-  ClientWidth = 934
+  ClientHeight = 1003
+  ClientWidth = 1221
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'Tahoma'
   Font.Style = []
+  Icon.Data = {
+    0000010001002020020001000100300100001600000028000000200000004000
+    0000010001000000000000000000000000000000000000000000000000000000
+    0000FFFFFF00C000003FC000003FCFFFFF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFF
+    FF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFFFF3FCFFF
+    FF3FCF00073FCFFFFF3FCFFFFF3FCF00073FCFFFFF3FCFFFFF3FCF00073FCFFF
+    FF3FCFFFFF3FC07FFF3FC07FFF3FE07FFF3FF07FFF3FF87FFF3FFC00003FFE00
+    003FFF00003F0000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000}
   OldCreateOrder = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
-  TextHeight = 13
+  PixelsPerInch = 120
+  TextHeight = 17
   object Memo1: TMemo
     Left = 0
-    Top = 56
-    Width = 934
-    Height = 711
+    Top = 73
+    Width = 1221
+    Height = 930
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alBottom
     ScrollBars = ssVertical
     TabOrder = 0
@@ -27,7 +43,7 @@ object Form1: TForm1
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 934
+    Width = 1221
     Height = 40
     ButtonHeight = 40
     ButtonWidth = 39
@@ -52,18 +68,26 @@ object Form1: TForm1
     end
   end
   object Edit1: TEdit
-    Left = 88
-    Top = 8
-    Width = 233
-    Height = 21
+    Left = 115
+    Top = 10
+    Width = 305
+    Height = 25
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     TabOrder = 2
     OnChange = Edit1Change
   end
   object CheckBox1: TCheckBox
-    Left = 352
-    Top = 10
-    Width = 97
-    Height = 17
+    Left = 460
+    Top = 13
+    Width = 127
+    Height = 22
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = ' Ignore Case'
     TabOrder = 3
   end
@@ -77,7 +101,7 @@ object Form1: TForm1
     Left = 640
     Top = 16
     Bitmap = {
-      494C010102003C00480020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102003C00500020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
