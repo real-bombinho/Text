@@ -78,7 +78,7 @@ begin
   tsFile.debug := DebugShow;
   try
     i := 0;
-    while (tsFile.ReadLn(sLine)) and (i < 1000) do
+    while (tsFile.ReadLn(sLine)) and (i < 1000) do      //Limit for 1000 Lines
     begin
       Memo1.Lines.Add(sLine);
       inc(i);
